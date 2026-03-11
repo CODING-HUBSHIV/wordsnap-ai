@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wordsnap</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-white h-screen flex items-center justify-center font-sans">
+
+<!-- Screen 1 -->
+<div id="screen1" class="w-full max-w-xl px-6">
+
+<div class="flex flex-col items-center gap-6">
+
+<input
+id="wordInput"
+type="text"
+placeholder="Enter a word..."
+class="w-full border border-gray-300 px-6 py-4 text-lg focus:outline-none focus:ring-2 focus:ring-gray-200 inputRounded"
+/>
+
+<button
+id="explainBtn"
+class="px-8 py-3 font-medium text-white bg-black hover:opacity-90 buttonRounded"
+>
+Explain
+</button>
+
+</div>
+
+</div>
+
+
+<!-- Screen 2 -->
+<div id="screen2" class="hidden w-full max-w-xl px-6">
+
+<div class="border border-gray-200 rounded-2xl p-8 space-y-6">
+
+<div id="wordTitle" class="text-2xl font-semibold text-gray-900"></div>
+
+<div id="loading" class="flex items-center gap-3 hidden">
+
+<div class="spinner"></div>
+
+<span class="text-gray-500 text-sm">
+Generating explanation...
+</span>
+
+</div>
+
+<div id="wordMeaning" class="text-gray-700 leading-relaxed min-h-[40px]"></div>
+
+<button
+id="backBtn"
+class="px-8 py-3 font-medium text-white bg-black hover:opacity-90 buttonRounded"
+>
+Explain another word
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
